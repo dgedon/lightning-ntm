@@ -53,9 +53,9 @@ We run both networks over 10 seeds using the bash command `multiple_train.sh`. S
 the exact training options used in our scenario. Note that we use a batch size of 8 to speed up training compared to a 
 batch size of 1 in the original paper. We show mean and std values for training and validation data.
 
-![NTM Copy Task](./results/ntm_results.eps)
+![NTM Copy Task](./results/ntm_results.png)
 
-![LSTM Copy Task](./results/lntm_results.eps)
+![LSTM Copy Task](./results/lstm_results.png)
 
 The individual validation costs are given by the following figures. Top is for NTM and bottom for LSTM.
 

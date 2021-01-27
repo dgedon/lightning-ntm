@@ -37,7 +37,7 @@ if __name__ == '__main__':
         plt.ylabel('Cost')
         plt.title(model_type + ' cost during training')
 
-        file_format = 'eps'
+        file_format = 'png'
         file_name = model_type.lower() + '_results.' + file_format
         plt.savefig(os.path.join(os.getcwd(), file_name), format=file_format)
         plt.show()
