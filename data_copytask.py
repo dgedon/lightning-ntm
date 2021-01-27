@@ -73,7 +73,7 @@ class CopyTaskDataModule(pl.LightningDataModule):
 
         self.dataloader_num_workers = dataloader_num_workers
 
-    def setup(self, stage):
+    def setup(self, stage='fit'):
         self.train_dataset = CopyDataset(
             self.train_batches_per_epoch,
             self.train_batch_size,

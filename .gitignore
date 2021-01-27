@@ -3,3 +3,4 @@
 */__pycache__
 /server
 /lightning_logs
+/results/data/*

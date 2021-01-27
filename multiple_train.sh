@@ -2,9 +2,9 @@
 
 # train lstm
 MODEL=lstm
-EPOCHS=30
+EPOCHS=4  0
 
-for SEED in {1..5}
+for SEED in {1..10}
 do
   printf '\n'
   printf "=%.0s" {1..40}
@@ -19,9 +19,9 @@ done
 
 # train ntm
 MODEL=ntm
-EPOCHS=10
+EPOCHS=20
 
-for SEED in {1..5}
+for SEED in {1..10}
 do
   printf '\n'
   printf "=%.0s" {1..40}
