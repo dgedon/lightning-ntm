@@ -17,17 +17,19 @@ class MyModel(pl.LightningModule):
         # save the hyperparameters. Can be accessed by self.hparams.[variable name]
         self.save_hyperparameters()
 
+        add_repeat = 1 if self.hparams.task.lower() == 'repeat-copy' else 0
+
         if self.hparams.model.lower() == 'lstm':
             network = MyLSTM(
-                self.hparams.seq_width + 1,
-                self.hparams.seq_width,
+                self.hparams.seq_width + 1 + add_repeat,
+                self.hparams.seq_width + add_repeat,
                 self.hparams.lstm_num_layers,
                 self.hparams.lstm_hidden_size,
             )
         elif self.hparams.model.lower() == 'ntm':
             network = MyNTM(
-                self.hparams.seq_width + 1,
-                self.hparams.seq_width,
+                self.hparams.seq_width + 1 + add_repeat,
+                self.hparams.seq_width + add_repeat,
                 self.hparams.ntm_controller_size,
                 self.hparams.ntm_controller_layers,
                 self.hparams.ntm_num_heads,
